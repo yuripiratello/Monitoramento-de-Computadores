@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Hosts On-Line Monitor</title>
+    <script type="text/javascript" src="/media/js/ajax.js?{{ sessionid }}"></script>
+    <script type="text/javascript" src="/media/js/jquery.js?{{ sessionid }}"></script>
+    <script type="text/javascript" src="/media/js/jquery.nestedAccordion.js?{{ sessionid }}"></script>
+    <script type="text/javascript" src="/media/js/jquery-ui.js?{{ sessionid }}"></script>
+    <script type="text/javascript" src="/media/js/jquery.simplemodal-1.4.1.js?{{ sessionid }}"></script>
+    <link rel="stylesheet" href="/media/css/main.css?{{ sessionid }}" type="text/css" media="screen" />
+    <link rel="stylesheet" href="/media/css/thickbox.css?{{ sessionid }}" type="text/css" media="screen" />
+    <link rel="stylesheet" href="/media/css/ui-lightness/jquery-ui-1.8.14.custom.css?{{ sessionid }}" type="text/css" media="screen" />
+    <!--[if lt IE 7]>
+        <style type='text/css'>
+            #simplemodal-container a.modalCloseImg {
+            background:none;
+            right:-14px;
+                    width:22px;
+                    height:26px;
+                    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(
+                        src='media/img/x.png', sizingMethod='scale'
+                    );
+                }
+        </style>
+    <![endif]-->
+</head>
+
+<body onload="javascript:interfaceUpdater('{{ sessionid }}');">
+    <div id="topo">
+        <div id="topo_resumo_hosts" class="esquerda">
+            --> Hosts: <span id="quantidade_hosts"></span><br />
+            ----> Online:<span id="quantidade_hosts_on"></span> <br />
+            ----> Offline: <span id="quantidade_hosts_off"></span><br />
+        </div>
+        <div id="topo_resumo_servicos" class="esquerda">
+            --> Servi&ccedil;os:<br />
+            ----> Offline:<br />
+        </div>
+        <div id="topo_usuario">
+            Ol&aacute; {{ request.user }}, <a href="/logout/">Sair</a>
+        </div>
+    </div>
+    <div id="loading"><!--<img src="/media/img/loading.gif/">-->Loading...</div>
+</body>
+<script>
+    $(document).ready( function(){
+        $('#loading').hide()
+        $(document).ajaxStart(function() {
+            $('#loading').show()
+        })
+        $(document).ajaxStop(function() {
+            $('#loading').hide()
+        })
+        $(window).bind('beforeunload', function(){
+            return 'Deseja realmente sair?'
+        })
+        $(window).bind('unload', function(event){
+            $.ajax({type:'GET',url:'/closeSession/'})
+        })
+    })
+</script>
+</html>

@@ -1,0 +1,162 @@
+/* 
+    Document   : main
+    Created on : 19/11/2010, 13:34:03
+    Author     : yuri
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+*{
+    font-size: 16px;
+    color: white;
+    background-color: black;
+    padding: 0;
+    margin: 5px;
+    border: 0;
+    font-family: Verdana, Tahoma, Arial, Sans, sans-serif;
+    white-space: nowrap;
+}
+
+#topo{
+    width: 99%;
+    min-height: 100px;
+    border: 1px white dashed;
+}
+
+#topo_usuario{
+    float: right;
+    margin-right: 5px;
+    margin-top: 5px;
+}
+
+#topo div{
+    display: block;
+    margin-left: 13%;
+    margin-top: 5px;
+}
+
+.esquerda{
+    float: left;
+}
+
+.root {
+    display: block;
+}
+#main{
+    display: block;
+}
+.hosts{
+    /*width: 150px;*/
+    min-width: 178px;
+    min-height: 164px;
+    height: 164px;
+    margin-left: 10px;
+    margin-top: 10px;
+    padding-right: 10px;
+    background-color: black;
+    text-align: center;
+    float: left
+}
+.setaDetailsOn{
+    /*float: left;*/
+    position: relative;
+    top: 93px;
+    left: -95px;
+    visibility: visible;
+}
+.setaDetailsOff{
+    visibility: hidden;
+}
+.in{
+    /*border: 1px #999999 solid;*/
+    vertical-align: top;
+}
+.out{
+    background-color: black;
+    border: 1px #999999 solid;
+    padding: 10px;
+
+}
+.detailson{
+    top: -246px;
+    right: -188px;
+    position: relative;
+    visibility: visible;
+    white-space: nowrap;
+}
+.detailsoff{
+    visibility: hidden;
+}
+
+
+.hosts {
+    float: left;
+    width: 140px;
+    margin: 5px;
+    background: black;
+    padding: 0px;
+    text-align: center;
+}
+.hostsdown {
+    float: left;
+    width: 140px;
+    margin-bottom: 20px;
+    background: #ff9;
+    padding: 10px;
+    text-align: center;
+}
+h5 {
+    margin: 4px;
+}
+.hostname, .hostip {
+    color: white;
+    white-space: nowrap;
+}
+.hostnamewarn, .hostipwarn {
+    color: orange;
+}
+.hostnamedown, .hostipdown {
+    color: red;
+}
+a{
+   text-decoration: none;
+}
+
+.group{
+    float: left;
+    margin: 3px;
+    border: orangered dashed;
+    /*width: 300px;*/
+    /*min-width: 300px;*/
+    /*max-width: 500px;*/
+    /*min-height: 300px;*/
+    /*max-height: 600px;*/
+}
+
+.group h1{
+    margin: 3px;
+    text-align: center;
+    cursor: pointer;
+}
+#loading{
+    float: right;
+}
+
+#simplemodal-container a.modalCloseImg {
+	background:url(/media/img/x.png) no-repeat; /* adjust url as required */
+	width:25px;
+	height:29px;
+	display:inline;
+	z-index:3200;
+	position:absolute;
+	top:-15px;
+	right:-18px;
+	cursor:pointer;
+}
+
+#simplemodal-overlay {background-color:#000000;}
+#simplemodal-container {background-color:#ffffff; border:8px solid #444; padding:12px;}
