@@ -7,28 +7,16 @@ DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
-    # ('Your Name', 'your_email@domain.com'),
+    ('Yuri Piratello', 'yuri.piratello@gmail.com'),
 )
 
 MANAGERS = ADMINS
-'''
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': 'app_noc',                      # Or path to database file if using sqlite3.
-        'USER': 'apps',                      # Not used with sqlite3.
-        'PASSWORD': 'h6uh96fg9hhj6',                  # Not used with sqlite3.
-        'HOST': 'dbserver.devel-it.com.br',                      # Set to empty string for localhost. Not used with sqlite3.
-        'PORT': '',                      # Set to empty string for default. Not used with sqlite3.
-    }
-}
-'''
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': 'noc',                      # Or path to database file if using sqlite3.
-        'USER': 'root',                      # Not used with sqlite3.
-        'PASSWORD': '123mudar',                  # Not used with sqlite3.
+        'ENGINE': 'django.db.backends.', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
+        'NAME': '',                      # Or path to database file if using sqlite3.
+        'USER': '',                      # Not used with sqlite3.
+        'PASSWORD': '',                  # Not used with sqlite3.
         'HOST': '',                      # Set to empty string for localhost. Not used with sqlite3.
         'PORT': '',                      # Set to empty string for default. Not used with sqlite3.
     }
@@ -112,7 +100,7 @@ INSTALLED_APPS = (
     # 'django.contrib.admindocs',
 )
 
-INTERNAL_IPS = ('127.0.0.1','0.0.0.0','10.192.250.166')
+INTERNAL_IPS = ('127.0.0.1','0.0.0.0')
 LOGIN_URL = "/login/"
 LOGOUT_URL = "/logout/"
 LOGIN_REDIRECT_URL = "/"
