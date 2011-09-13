@@ -17,6 +17,7 @@ Este sistema de monitoramento é dividido em duas partes:
 Em construção.
 
 ##TODO:
+- Atualizar o django para 1.3
 - commitar alguns plugins.
 - criar uma forma de atualização automática com o Fabric
 - restartar automaticamente os serviços que estiverem down.
