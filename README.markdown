@@ -16,5 +16,7 @@ Este sistema de monitoramento é dividido em duas partes:
 ##Instalação:
 Em construção.
 
-##Observações:
-Em breve estarei subindo aqui alguns plugins prontos.
+##TODO:
+- commitar alguns plugins.
+- criar uma forma de atualização automática com o Fabric
+- restartar automaticamente os serviços que estiverem down.
